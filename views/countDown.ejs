@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beers Backend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class='container'>
+        <% if (number > 1) { %>
+            <p><%= number %> bottles of warm water on the wall. <a href="/<%= number - 1%>">Take one down.</a></p>
+        <% } else if (number == 1) { %>
+            <p><%= number %> bottle of warm water on the wall. <a href="/<%= number - 1%>">Take one down.</a></p>
+        <% } else { %>
+            <p> No bottles of warm water on the wall. <a href="/"> Start Over </a></p>
+        <% } %>
+    </div>
+</body>
+</html>
