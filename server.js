@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-// const port = 4567
+const port = 4567
 
 app.use(express.static('public'))
 
@@ -16,6 +16,6 @@ app.get('/:number', function(req, res) {
     res.render('countDown.ejs', {number: number})
 })
 
-// app.listen(port, () => {
-//     console.log(`listening on port#{port}`)
-// })
+app.listen(port, () => {
+    console.log(`listening on port#{port}`)
+})
